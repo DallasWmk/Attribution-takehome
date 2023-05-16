@@ -1,0 +1,21 @@
+version: "3"
+services:
+  restrictedsection:
+    image: restrictedsection:latest
+    ports:
+      - "5000:5000"
+    networks:
+      my-network:
+        ipv4_address: 10.1.0.2
+  librarian:
+    image: librarian:latest
+    networks:
+      my-network:
+        ipv4_address: 10.1.0.3
+
+networks:
+  my-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.1.0.0/24
