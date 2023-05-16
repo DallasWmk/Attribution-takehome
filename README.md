@@ -25,4 +25,7 @@ Per the instructions provided, the test client is a containerized application im
 - `test_overwrite`
 	This method overwrites a key:value pair and verifies that the new value is returned when querying the key.
 
-
+## Instructions:
+---
+- To get started once having cloned the repo to a local machine, run the `build-docker-images.sh` script located in the root dir of the project to generate the images.
+- After the images have been built, simply run `docker-compose up` to bring the images up and immediately start the tests. The server running the key-value store will come up first and display some start up logs, then shortly after the tests will run and display the results.
